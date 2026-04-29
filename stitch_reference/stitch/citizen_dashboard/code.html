@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Civic Clarity - Citizen Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d8e2ff",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-container-highest": "#e1e3e4",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-surface-variant": "#414754",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-container": "#008939",
+                        "on-tertiary-fixed": "#002108",
+                        "on-tertiary-container": "#ffffff",
+                        "on-background": "#191c1d",
+                        "primary-container": "#1a73e8",
+                        "secondary-fixed-dim": "#afc7fb",
+                        "inverse-primary": "#adc7ff",
+                        "tertiary": "#006d2c",
+                        "on-surface": "#191c1d",
+                        "outline-variant": "#c1c6d6",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d9dadb",
+                        "outline": "#727785",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary": "#475e8c",
+                        "surface-container-low": "#f3f4f5",
+                        "secondary-container": "#b2c9fe",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container": "#edeeef",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-surface": "#2e3132",
+                        "primary": "#005bbf",
+                        "on-secondary-container": "#3d5481",
+                        "on-secondary-fixed-variant": "#2e4673",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed": "#001a41",
+                        "tertiary-fixed-dim": "#6ddd81",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#005320",
+                        "surface-tint": "#005bc0",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-primary-container": "#ffffff",
+                        "tertiary-fixed": "#89fa9b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(24px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400" data-icon="account_balance">account_balance</span>
+<h1 class="text-xl font-bold tracking-tighter text-blue-700 dark:text-blue-400">Civic Clarity</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-500" data-icon="search">search</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto min-h-screen">
+<!-- Hero Section / Asymmetric Layout -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 items-end">
+<div class="lg:col-span-8">
+<p class="text-primary font-semibold tracking-widest uppercase text-xs mb-3">Welcome Back, Citizen</p>
+<h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-4 leading-tight">
+                    Shaping a better city,<br/>
+<span class="text-primary">one report at a time.</span>
+</h2>
+<p class="text-on-surface-variant text-lg max-w-xl">
+                    Track your contributions to the community and stay informed about the latest urban developments in your district.
+                </p>
+</div>
+<div class="lg:col-span-4 flex justify-end">
+<button class="group relative bg-primary-container text-on-primary w-full lg:w-auto px-8 py-5 rounded-xl shadow-[0_8px_24px_rgba(0,91,191,0.2)] hover:bg-primary transition-all duration-300 flex items-center justify-center gap-3 active:scale-95">
+<span class="material-symbols-outlined text-2xl" data-icon="add_circle">add_circle</span>
+<span class="font-bold text-lg tracking-tight">New Complaint</span>
+</button>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-lowest p-6 rounded-xl border-none transition-all hover:bg-surface-container-low">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-3 rounded-lg" data-icon="pending_actions">pending_actions</span>
+<span class="text-xs font-bold uppercase tracking-widest text-outline">Active</span>
+</div>
+<p class="text-3xl font-black text-on-surface">04</p>
+<p class="text-on-surface-variant text-sm mt-1">Ongoing reports</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-none transition-all hover:bg-surface-container-low">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-tertiary bg-tertiary-fixed p-3 rounded-lg" data-icon="check_circle">check_circle</span>
+<span class="text-xs font-bold uppercase tracking-widest text-outline">Resolved</span>
+</div>
+<p class="text-3xl font-black text-on-surface">28</p>
+<p class="text-on-surface-variant text-sm mt-1">Issues fixed this year</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-none transition-all hover:bg-surface-container-low">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-secondary bg-secondary-fixed p-3 rounded-lg" data-icon="bolt">bolt</span>
+<span class="text-xs font-bold uppercase tracking-widest text-outline">Impact</span>
+</div>
+<p class="text-3xl font-black text-on-surface">85%</p>
+<p class="text-on-surface-variant text-sm mt-1">Resolution efficiency</p>
+</div>
+<div class="hidden lg:block bg-gradient-to-br from-primary-container to-primary p-6 rounded-xl border-none text-on-primary">
+<div class="flex flex-col h-full justify-between">
+<p class="font-bold leading-tight">Your reports have directly contributed to 3 district improvements this month.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="stars">stars</span>
+<span class="text-sm font-medium">Top Contributor</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Current Status Section -->
+<div class="lg:col-span-8">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-2xl font-bold tracking-tight text-on-surface">Current Status</h3>
+<button class="text-primary text-sm font-semibold hover:underline">View All Reports</button>
+</div>
+<div class="space-y-4">
+<!-- Report Card 1 -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl flex items-center gap-5 transition-all hover:bg-surface-container-low">
+<div class="h-16 w-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="h-full w-full object-cover" data-alt="close-up photo of a cracked asphalt road with yellow lane markings under bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsDnKtLqEvxnC9XYMtiMqHDlPa2kHTklUG_Op0wrc0GmWH1t4Br17EwxDn4ReTHkTgx8Xh1NSt_UYPul8viV0a4mPD8VxK8ZnIGpDBXzxifhhCTFTazMgIdfQqv0HpSZK1o6u6lngTSuMV9PrEeWEgUKw0gjGJJ_tNUfy6XJUbUvWiHXuPcsAJycyoNlt5u0K_GKDVmNEfZCTUNh8Ruf5q232A2WeNGwEzfOo-F2eTTJx9qjIzJAfxc8UzZxm5aoDVt7IxnDKRjFuu"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-start justify-between mb-1">
+<h4 class="font-bold text-on-surface">Pothole on 5th Avenue</h4>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider">In Progress</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-1 mb-2">Reported 2 days ago near the Central Library intersection.</p>
+<div class="flex items-center gap-4 text-[11px] text-outline font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> Last update: 4h ago</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> District 4</span>
+</div>
+</div>
+</div>
+<!-- Report Card 2 -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl flex items-center gap-5 transition-all hover:bg-surface-container-low">
+<div class="h-16 w-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="h-full w-full object-cover" data-alt="street lamp post with a glowing orange light against a dark blue twilight sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByzzuPuhHcALbonRqu_R-65wQr4VpfVyl0Sk0QaMZtir1l1Aojjz8wCa70xXSlAPzexGI5zd1k2zG_Exr6zqldQt50rTU8plHo5RaifuUl2Uu6mzSiMjfj-UPj31zHeLCqR4PQLiWcczM7GezY21sML73XAHvVUkGHJLGnaEAxRFmM2WWz2ks7Hz8aO_3HW-xhPLHSd-L5mkPvtDveCy-sBq5JgjHyNOzsJ6oY-GOIWoPcMX1byh_OYXvNbgmtOuNosokOaWypbtIB"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-start justify-between mb-1">
+<h4 class="font-bold text-on-surface">Streetlight Outage</h4>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-outline text-[10px] font-bold uppercase tracking-wider">Received</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-1 mb-2">Park area illumination is currently offline for 3 blocks.</p>
+<div class="flex items-center gap-4 text-[11px] text-outline font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> Reported today</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> District 2</span>
+</div>
+</div>
+</div>
+<!-- Report Card 3 -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl flex items-center gap-5 transition-all hover:bg-surface-container-low">
+<div class="h-16 w-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="h-full w-full object-cover" data-alt="clean urban park bench next to a paved pathway with lush green grass and soft morning shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtetLVYirCI9oN_MxrYNJJ71bMl_mxn9RoNNenUYtJBruOC6-iSy9lv_aCwyu9SW2vremkSdsoBmluLwgeFAf67mS0vy9zYUH3DZY27XrjFqVav0QfNPPo8TvS3BOfqveURC8eBykmTdQhtd66j6_OZja5Uo7x5KYLkmQR9y4ef9QaUtGGeay2lu2Ry_FM2vbYvDODYYw8U0BsUusgBuHRd47BQE_gEjKMg-9PsF-zcjkp7BVS5FaKfe447FZqW9cFIYXCEAxIkPPH"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-start justify-between mb-1">
+<h4 class="font-bold text-on-surface">Graffiti Removal</h4>
+<span class="px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-wider">Resolved</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-1 mb-2">Public bench in Sunnyvale Park has been cleaned and repainted.</p>
+<div class="flex items-center gap-4 text-[11px] text-outline font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="check">check</span> Completed yesterday</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> District 7</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Announcements Section -->
+<div class="lg:col-span-4">
+<h3 class="text-2xl font-bold tracking-tight text-on-surface mb-6">Recent Announcements</h3>
+<div class="bg-surface-container p-6 rounded-xl space-y-6">
+<div class="relative pl-4 border-l-2 border-primary">
+<span class="text-[10px] font-extrabold uppercase tracking-tighter text-primary mb-1 block">Traffic Alert</span>
+<h5 class="font-bold text-on-surface mb-1">Main St. Maintenance</h5>
+<p class="text-xs text-on-surface-variant leading-relaxed">Scheduled road resurfacing starting next Monday. Expect delays between 8 AM and 4 PM.</p>
+</div>
+<div class="relative pl-4 border-l-2 border-tertiary">
+<span class="text-[10px] font-extrabold uppercase tracking-tighter text-tertiary mb-1 block">Community Event</span>
+<h5 class="font-bold text-on-surface mb-1">Town Hall: Green Spaces</h5>
+<p class="text-xs text-on-surface-variant leading-relaxed">Join the discussion about the new park development project at City Hall this Thursday.</p>
+</div>
+<div class="relative pl-4 border-l-2 border-secondary">
+<span class="text-[10px] font-extrabold uppercase tracking-tighter text-secondary mb-1 block">Utilities update</span>
+<h5 class="font-bold text-on-surface mb-1">Water Smart Program</h5>
+<p class="text-xs text-on-surface-variant leading-relaxed">New digital meters are being installed in District 4. Check your email for scheduling details.</p>
+</div>
+<button class="w-full py-3 bg-surface-container-highest text-on-surface font-bold text-xs uppercase tracking-widest rounded-lg hover:bg-outline-variant transition-colors">
+                        All Announcements
+                    </button>
+</div>
+<!-- District Insights Card -->
+<div class="mt-6 rounded-xl overflow-hidden relative h-48 group cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="high angle view of a modern city intersection with clean white crosswalks and minimal traffic in morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNLotDrwKdX7oBn7kMNZAvd8p8sYud1nMl-t3iJdi8lXg23JjsObKKlQjVtqvt5DRVqHkT4lPSVhsUaH24CrCcyZlsdA9gLKpE64On63nwGtxi_2iXl4LD44Dg-nbzv6XRc4jV82tdvdp035D6XIX8hShV-2d1UgBi0WSCJTbG3Na491jdvM4e1rhrcX3EMFSpecYi1LUDxZYGt4_axdevZAX0RlR5e9_l8Dm5vD-q8ejFmr_KFn5sD3CXA7Ucxhq0bWfcs_WPX8J6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-5">
+<h4 class="text-white font-bold text-lg leading-tight">Your District: At a Glance</h4>
+<p class="text-white/80 text-xs mt-1">Explore real-time data on air quality, traffic, and public services near you.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-6 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] z-50">
+<a class="flex flex-col items-center justify-center bg-blue-100/50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl px-4 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1 hover:text-blue-600 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="assignment_late">assignment_late</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter">My Complaints</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1 hover:text-blue-600 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter">Alerts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1 hover:text-blue-600 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button - Supressed as per Relevance Check for Detail screens, but kept here for Dashboard Home -->
+<button class="fixed bottom-24 right-6 md:bottom-10 md:right-10 w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-xl active:scale-90 transition-transform md:hidden">
+<span class="material-symbols-outlined text-2xl" data-icon="add" style="font-variation-settings: 'FILL' 0; font-weight: 600;">add</span>
+</button>
+</body></html>

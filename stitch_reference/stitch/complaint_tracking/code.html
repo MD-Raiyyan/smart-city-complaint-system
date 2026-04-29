@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Civic Clarity - Complaint Tracking</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d8e2ff",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-container-highest": "#e1e3e4",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-surface-variant": "#414754",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-container": "#008939",
+                        "on-tertiary-fixed": "#002108",
+                        "on-tertiary-container": "#ffffff",
+                        "on-background": "#191c1d",
+                        "primary-container": "#1a73e8",
+                        "secondary-fixed-dim": "#afc7fb",
+                        "inverse-primary": "#adc7ff",
+                        "tertiary": "#006d2c",
+                        "on-surface": "#191c1d",
+                        "outline-variant": "#c1c6d6",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d9dadb",
+                        "outline": "#727785",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary": "#475e8c",
+                        "surface-container-low": "#f3f4f5",
+                        "secondary-container": "#b2c9fe",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container": "#edeeef",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-surface": "#2e3132",
+                        "primary": "#005bbf",
+                        "on-secondary-container": "#3d5481",
+                        "on-secondary-fixed-variant": "#2e4673",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed": "#001a41",
+                        "tertiary-fixed-dim": "#6ddd81",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#005320",
+                        "surface-tint": "#005bc0",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-primary-container": "#ffffff",
+                        "tertiary-fixed": "#89fa9b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full shadow-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-700" data-icon="account_balance">account_balance</span>
+<h1 class="text-xl font-bold tracking-tighter text-blue-700">Civic Clarity</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-500 hover:bg-slate-200/50 transition-colors p-2 rounded-full cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12">
+<h2 class="text-4xl font-extrabold tracking-tight mb-4 text-on-surface">Complaint History</h2>
+<p class="text-on-surface-variant max-w-2xl leading-relaxed">
+                Track the status of your reported issues and monitor the progress of city maintenance requests in real-time.
+            </p>
+</section>
+<!-- Search & Filter Controls -->
+<div class="flex flex-col md:flex-row gap-4 mb-8">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary text-on-surface" placeholder="Search by ticket ID or keyword..." type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+<button class="bg-primary text-on-primary px-5 py-3 rounded-xl font-semibold flex items-center gap-2 transition-transform active:scale-95 shadow-lg">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                    All
+                </button>
+<button class="bg-surface-container-lowest text-on-surface-variant px-5 py-3 rounded-xl font-medium border border-outline-variant/20 hover:bg-surface-container-low transition-colors">Pending</button>
+<button class="bg-surface-container-lowest text-on-surface-variant px-5 py-3 rounded-xl font-medium border border-outline-variant/20 hover:bg-surface-container-low transition-colors">In Progress</button>
+<button class="bg-surface-container-lowest text-on-surface-variant px-5 py-3 rounded-xl font-medium border border-outline-variant/20 hover:bg-surface-container-low transition-colors">Resolved</button>
+</div>
+</div>
+<!-- Complaints List (Tonal Stacking) -->
+<div class="space-y-4">
+<!-- Entry 1: Pending -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(25,28,29,0.06)] flex flex-col md:flex-row gap-6 items-start cursor-pointer">
+<div class="w-14 h-14 bg-surface-container-high rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="traffic">traffic</span>
+</div>
+<div class="flex-grow">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-2">
+<div class="flex items-center gap-3">
+<h3 class="text-lg font-bold tracking-tight">Broken Traffic Signal</h3>
+<span class="text-[10px] font-bold tracking-widest uppercase bg-surface-container-highest px-2 py-1 rounded text-on-surface-variant">#CC-8902</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100/50 text-blue-700 text-xs font-bold uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-blue-700 animate-pulse"></span>
+                            Pending
+                        </span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4 leading-relaxed">
+                        The intersection at 5th and Main has a malfunctioning pedestrian signal. It stays red regardless of the traffic cycle, causing pedestrians to cross dangerously.
+                    </p>
+<div class="flex items-center gap-6 text-xs font-medium text-outline">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="calendar_today">calendar_today</span>
+                            Oct 24, 2023 • 09:15 AM
+                        </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="location_on">location_on</span>
+                            Downtown District
+                        </div>
+</div>
+</div>
+</div>
+<!-- Entry 2: In Progress -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(25,28,29,0.06)] flex flex-col md:flex-row gap-6 items-start cursor-pointer">
+<div class="w-14 h-14 bg-surface-container-high rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="water_damage">water_damage</span>
+</div>
+<div class="flex-grow">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-2">
+<div class="flex items-center gap-3">
+<h3 class="text-lg font-bold tracking-tight">Water Main Leak</h3>
+<span class="text-[10px] font-bold tracking-widest uppercase bg-surface-container-highest px-2 py-1 rounded text-on-surface-variant">#CC-7741</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs" data-icon="engineering">engineering</span>
+                            In Progress
+                        </span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4 leading-relaxed">
+                        Large puddle forming near the fire hydrant. Water appears to be bubbling up from the sidewalk. Reporting for potential underground pipe burst.
+                    </p>
+<div class="flex items-center gap-6 text-xs font-medium text-outline">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="calendar_today">calendar_today</span>
+                            Oct 22, 2023 • 02:30 PM
+                        </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="location_on">location_on</span>
+                            North Oak Suburbs
+                        </div>
+</div>
+</div>
+</div>
+<!-- Entry 3: Resolved (Success) -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(25,28,29,0.06)] flex flex-col md:flex-row gap-6 items-start cursor-pointer">
+<div class="w-14 h-14 bg-surface-container-high rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="eco">eco</span>
+</div>
+<div class="flex-grow">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-2">
+<div class="flex items-center gap-3">
+<h3 class="text-lg font-bold tracking-tight">Fallen Tree Branch</h3>
+<span class="text-[10px] font-bold tracking-widest uppercase bg-surface-container-highest px-2 py-1 rounded text-on-surface-variant">#CC-5120</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs" data-icon="check_circle">check_circle</span>
+                            Resolved
+                        </span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4 leading-relaxed">
+                        Large oak branch blocking the bike lane on Riverside Drive. Needs urgent removal to avoid accidents during evening rush hour.
+                    </p>
+<div class="flex items-center gap-6 text-xs font-medium text-outline">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="calendar_today">calendar_today</span>
+                            Oct 18, 2023 • 04:45 PM
+                        </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="location_on">location_on</span>
+                            Riverside Park
+                        </div>
+</div>
+</div>
+</div>
+<!-- Entry 4: Resolved -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(25,28,29,0.06)] flex flex-col md:flex-row gap-6 items-start cursor-pointer">
+<div class="w-14 h-14 bg-surface-container-high rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="lightbulb">lightbulb</span>
+</div>
+<div class="flex-grow">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-2">
+<div class="flex items-center gap-3">
+<h3 class="text-lg font-bold tracking-tight">Street Light Outage</h3>
+<span class="text-[10px] font-bold tracking-widest uppercase bg-surface-container-highest px-2 py-1 rounded text-on-surface-variant">#CC-4491</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs" data-icon="check_circle">check_circle</span>
+                            Resolved
+                        </span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4 leading-relaxed">
+                        Street lamp #42 is flickering and making a buzzing sound. It completely turns off after 10 PM, leaving the walkway dark.
+                    </p>
+<div class="flex items-center gap-6 text-xs font-medium text-outline">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="calendar_today">calendar_today</span>
+                            Oct 12, 2023 • 08:20 PM
+                        </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="location_on">location_on</span>
+                            Heritage Square
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Map Highlight (Bento-style element) -->
+<div class="mt-12 rounded-2xl overflow-hidden relative h-64 shadow-xl border border-outline-variant/10 group">
+<img alt="City Map View" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern abstract map illustration of a smart city with clean lines and geometric shapes in blue and slate tones" data-location="Metropolis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1eW4lxPDra3YUlYMJrHzunJr_gdFut7ZLjXKqTLPgURKayR-xaaGCEYz295pVdlEfK3YBNAea4Rg3Uf_c8gfnQtzrU6eV4Kf-H4rHssyOuHltW9Zw7BM8rmxujodgB2lvdxukGwDq-gkbrCW2uMOB6lbvCPQSv0EjIHrKDv9MyThxvLH0rNxBNj9pPyWL-V_pArQ0iCO0-5VAVMGT-rpZaXXEKjQxXkK1_6ninKA0tyh8t2jp1Co7gLDUl4KuFmmSPKPlL0kL_0fD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="text-white text-xl font-bold tracking-tight mb-1">Visualizing Resolution</h4>
+<p class="text-slate-300 text-sm">84% of complaints in your district were resolved this month.</p>
+</div>
+<button class="bg-white text-on-background px-6 py-2 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-colors">
+                        View Map
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-6 bg-white/80 backdrop-blur-xl rounded-t-2xl z-50 border-t border-slate-100 shadow-[0_-4px_24px_rgba(0,0,0,0.04)]">
+<div class="flex flex-col items-center justify-center text-slate-500 px-4 py-1 transition-transform active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-100/50 text-blue-700 rounded-xl px-4 py-1 transition-transform active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="assignment_late">assignment_late</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">My Complaints</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-4 py-1 transition-transform active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">Alerts</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-4 py-1 transition-transform active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">Profile</span>
+</div>
+</nav>
+<!-- Contextual FAB (Only for Home/Dashboards, but appropriate here for New Complaint) -->
+<button class="fixed right-6 bottom-28 w-14 h-14 rounded-2xl bg-primary text-on-primary flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95 z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>

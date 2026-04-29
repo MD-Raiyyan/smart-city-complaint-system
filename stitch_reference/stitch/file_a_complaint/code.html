@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Civic Clarity - File a Complaint</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d8e2ff",
+                    "secondary-fixed": "#d8e2ff",
+                    "surface-container-highest": "#e1e3e4",
+                    "error-container": "#ffdad6",
+                    "surface": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#adc7ff",
+                    "on-surface-variant": "#414754",
+                    "inverse-on-surface": "#f0f1f2",
+                    "tertiary-container": "#008939",
+                    "on-tertiary-fixed": "#002108",
+                    "on-tertiary-container": "#ffffff",
+                    "on-background": "#191c1d",
+                    "primary-container": "#1a73e8",
+                    "secondary-fixed-dim": "#afc7fb",
+                    "inverse-primary": "#adc7ff",
+                    "tertiary": "#006d2c",
+                    "on-surface": "#191c1d",
+                    "outline-variant": "#c1c6d6",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d9dadb",
+                    "outline": "#727785",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "secondary": "#475e8c",
+                    "surface-container-low": "#f3f4f5",
+                    "secondary-container": "#b2c9fe",
+                    "surface-bright": "#f8f9fa",
+                    "surface-container": "#edeeef",
+                    "on-primary-fixed": "#001a41",
+                    "surface-container-high": "#e7e8e9",
+                    "inverse-surface": "#2e3132",
+                    "primary": "#005bbf",
+                    "on-secondary-container": "#3d5481",
+                    "on-secondary-fixed-variant": "#2e4673",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e1e3e4",
+                    "on-secondary-fixed": "#001a41",
+                    "tertiary-fixed-dim": "#6ddd81",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f8f9fa",
+                    "on-tertiary-fixed-variant": "#005320",
+                    "surface-tint": "#005bc0",
+                    "on-primary-fixed-variant": "#004493",
+                    "on-primary-container": "#ffffff",
+                    "tertiary-fixed": "#89fa9b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed">
+<!-- Top Navigation Anchor (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-700">account_balance</span>
+<span class="text-xl font-bold tracking-tighter text-blue-700">Civic Clarity</span>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-500 hover:bg-slate-200/50 transition-colors px-2 py-1 rounded-lg" href="#">Home</a>
+<a class="text-blue-700 font-semibold px-2 py-1 rounded-lg" href="#">My Complaints</a>
+<a class="text-slate-500 hover:bg-slate-200/50 transition-colors px-2 py-1 rounded-lg" href="#">Alerts</a>
+</nav>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer active:scale-95 duration-200">account_circle</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-4xl mx-auto">
+<!-- Progress Indicator -->
+<div class="mb-12">
+<div class="flex items-center justify-between mb-4">
+<span class="text-label-md font-bold uppercase tracking-widest text-primary">Step 2 of 3</span>
+<span class="text-on-surface-variant text-sm font-medium">Issue Details</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-primary transition-all duration-500"></div>
+</div>
+</div>
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Form Core -->
+<div class="md:col-span-8">
+<div class="mb-10">
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Report a Civic Issue</h1>
+<p class="text-on-surface-variant text-lg">Provide details about the infrastructure or service problem you've encountered.</p>
+</div>
+<form class="space-y-8">
+<!-- Title Input -->
+<div class="space-y-2">
+<label class="text-sm font-bold uppercase tracking-wider text-on-surface-variant" for="title">Complaint Title</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg px-4 py-3 focus:ring-0 focus:border-b-2 focus:border-primary transition-all outline-none text-on-surface placeholder:text-outline" id="title" placeholder="e.g., Pothole on 5th Avenue" type="text"/>
+</div>
+<!-- Category Picker (Bento Style) -->
+<div class="space-y-4">
+<label class="text-sm font-bold uppercase tracking-wider text-on-surface-variant">Issue Category</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<button class="group flex flex-col items-center justify-center p-4 bg-surface-container-lowest border border-outline-variant/20 rounded-xl hover:bg-primary-fixed transition-all" type="button">
+<span class="material-symbols-outlined text-primary mb-2">engineering</span>
+<span class="text-xs font-semibold">Road</span>
+</button>
+<button class="group flex flex-col items-center justify-center p-4 bg-primary-fixed border border-primary/20 rounded-xl" type="button">
+<span class="material-symbols-outlined text-primary mb-2" data-weight="fill" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<span class="text-xs font-bold text-on-primary-fixed">Water</span>
+</button>
+<button class="group flex flex-col items-center justify-center p-4 bg-surface-container-lowest border border-outline-variant/20 rounded-xl hover:bg-primary-fixed transition-all" type="button">
+<span class="material-symbols-outlined text-primary mb-2">bolt</span>
+<span class="text-xs font-semibold">Electricity</span>
+</button>
+<button class="group flex flex-col items-center justify-center p-4 bg-surface-container-lowest border border-outline-variant/20 rounded-xl hover:bg-primary-fixed transition-all" type="button">
+<span class="material-symbols-outlined text-primary mb-2">delete</span>
+<span class="text-xs font-semibold">Garbage</span>
+</button>
+</div>
+</div>
+<!-- Description -->
+<div class="space-y-2">
+<label class="text-sm font-bold uppercase tracking-wider text-on-surface-variant" for="desc">Description</label>
+<textarea class="w-full bg-surface-container-highest border-none rounded-lg px-4 py-3 focus:ring-0 focus:border-b-2 focus:border-primary transition-all outline-none text-on-surface placeholder:text-outline" id="desc" placeholder="Describe the situation in detail..." rows="5"></textarea>
+</div>
+<!-- Location Selector -->
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<label class="text-sm font-bold uppercase tracking-wider text-on-surface-variant">Incident Location</label>
+<button class="text-xs font-bold text-primary flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">my_location</span>
+                                USE CURRENT
+                            </button>
+</div>
+<div class="relative rounded-xl overflow-hidden h-64 bg-surface-container-high group">
+<img class="w-full h-full object-cover opacity-60" data-alt="abstract stylized topographic map of an urban city center with clean blue and grey lines and minimal markers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIZcU7LS99lsaK0uJe68BiDSu0tXzx8jEm1YY7Zq80R2B87wZj2B0bKWZkt_MdZDrb9vX5DDtov93gTPG16o7dd5d_oyslQtdW7vU7hq5EJb-yb85zwvWEZzrxDi1F8EySbRmgY_2nX2EwXS03xxhOONXtSAG4Nrj8LhT-YxGve8MoTUlzzS7DGLaH7d1ZatKabHJI7p5or6CwrvWQwNTb_AUWsgHcGJOthuc9Z7avUUKkzvdWZLXoH8GSMf12jKx3JxTXl7prKC0c"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/90 backdrop-blur shadow-lg p-3 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none text-sm w-full focus:ring-0 outline-none" placeholder="Enter address or pinpoint on map" type="text"/>
+</div>
+</div>
+</div>
+<!-- Media Upload -->
+<div class="space-y-4">
+<label class="text-sm font-bold uppercase tracking-wider text-on-surface-variant">Supporting Media (Optional)</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<div class="aspect-square border-2 border-dashed border-outline-variant rounded-xl flex flex-col items-center justify-center text-outline hover:border-primary hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-3xl mb-1">add_a_photo</span>
+<span class="text-[10px] font-bold tracking-widest uppercase">Upload Photo</span>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="close-up photo of a damaged water pipe leaking onto a cracked urban pavement in daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0GYmdu_3ZTNjo1uwQlP8KbUGSk0kK_UWWpslx_W1pCWcq-PFNMmj-L7KytCQsAqVGZFqffPWjvi51wo32UcoqPHbF6cOebflc35XuA6JrrEfktw5WQLAzy6kuKYYjK_eUQOa7nwAxVCd1IoRxjQaMGjuFJsh9LF98PvKR2gmGSQ_mQcCGd8JSj5jrK_h5H9jR1KpcERAD7_63iripEcvhKOr8OACupWQZ9mksI2JLraB6SfHhVllPBf9-iK27Mc1zc6M7lOfaQrxz"/>
+<button class="absolute top-2 right-2 bg-black/40 text-white rounded-full p-1 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Submission Action -->
+<div class="pt-8 flex flex-col sm:flex-row gap-4 items-center justify-between">
+<button class="text-outline font-bold tracking-widest text-xs px-6 py-3 uppercase hover:text-on-surface transition-colors" type="button">
+                            Save as Draft
+                        </button>
+<button class="w-full sm:w-auto bg-primary text-on-primary px-12 py-4 rounded-lg font-bold tracking-tight shadow-[0_8px_24px_rgba(0,91,191,0.2)] hover:bg-primary hover:shadow-[0_8px_32px_rgba(0,91,191,0.3)] transition-all active:scale-95" type="submit">
+                            Submit Report
+                        </button>
+</div>
+</form>
+</div>
+<!-- Side Info / Guidance -->
+<div class="md:col-span-4 space-y-6">
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/10">
+<div class="w-10 h-10 bg-tertiary-container rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-white">verified</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Our Quality Promise</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Reports with clear photos and accurate locations are resolved 40% faster by our field teams.</p>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-xs font-semibold text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-lg" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Response within 24 hours
+                        </div>
+<div class="flex items-center gap-3 text-xs font-semibold text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-lg" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Real-time tracking
+                        </div>
+</div>
+</div>
+<div class="bg-primary-fixed/30 p-6 rounded-2xl">
+<h3 class="text-sm font-bold uppercase tracking-widest text-primary mb-4">Need Help?</h3>
+<p class="text-sm text-on-secondary-fixed-variant mb-4">If this is a life-threatening emergency, please call emergency services immediately.</p>
+<a class="text-sm font-bold text-primary flex items-center gap-2" href="#">
+                        Chat with Support <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell (Shared Component) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-6 bg-white/80 backdrop-blur-xl border-t border-slate-100 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] z-50">
+<div class="flex flex-col items-center justify-center text-slate-500 px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-100/50 text-blue-700 rounded-xl px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">assignment_late</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">My Complaints</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">Alerts</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Civic Clarity | Complaint Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d8e2ff",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-container-highest": "#e1e3e4",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-surface-variant": "#414754",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-container": "#008939",
+                        "on-tertiary-fixed": "#002108",
+                        "on-tertiary-container": "#ffffff",
+                        "on-background": "#191c1d",
+                        "primary-container": "#1a73e8",
+                        "secondary-fixed-dim": "#afc7fb",
+                        "inverse-primary": "#adc7ff",
+                        "tertiary": "#006d2c",
+                        "on-surface": "#191c1d",
+                        "outline-variant": "#c1c6d6",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d9dadb",
+                        "outline": "#727785",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary": "#475e8c",
+                        "surface-container-low": "#f3f4f5",
+                        "secondary-container": "#b2c9fe",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container": "#edeeef",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-surface": "#2e3132",
+                        "primary": "#005bbf",
+                        "on-secondary-container": "#3d5481",
+                        "on-secondary-fixed-variant": "#2e4673",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed": "#001a41",
+                        "tertiary-fixed-dim": "#6ddd81",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#005320",
+                        "surface-tint": "#005bc0",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-primary-container": "#ffffff",
+                        "tertiary-fixed": "#89fa9b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400">account_balance</span>
+<span class="text-xl font-bold tracking-tighter text-blue-700 dark:text-blue-400">Civic Clarity</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors p-2 rounded-full cursor-pointer">account_circle</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-8 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Header Section: Full Width -->
+<div class="lg:col-span-12 mb-4">
+<div class="flex items-center gap-2 text-slate-500 mb-2 font-medium text-sm">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span>Back to My Complaints</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="bg-tertiary-container text-on-tertiary-container text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest mb-3 inline-block">Resolved</span>
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface leading-tight">Broken Streetlight: North Avenue &amp; 4th Street</h1>
+<p class="text-on-surface-variant mt-2 text-lg">Case ID: #CC-88291-NW</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-surface-container-lowest text-primary px-4 py-2 rounded-lg font-semibold border border-outline-variant/20 hover:bg-surface-container-low transition-all">Print Report</button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-semibold shadow-sm active:scale-95 transition-all">Share Case</button>
+</div>
+</div>
+</div>
+<!-- Left Column: Details & Evidence -->
+<div class="lg:col-span-7 space-y-6">
+<!-- Bento Detail Card -->
+<section class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-outline-variant/10 shadow-sm">
+<h2 class="text-xl font-bold mb-6 text-on-surface">Issue Overview</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1">Category</p>
+<p class="font-semibold text-on-surface">Infrastructure &amp; Public Lighting</p>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1">Reported On</p>
+<p class="font-semibold text-on-surface">October 24, 2023 • 09:45 AM</p>
+</div>
+<div class="md:col-span-2">
+<p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1">Description</p>
+<p class="text-on-surface-variant leading-relaxed">The main streetlight at the intersection of North Ave and 4th Street has been flickering for three days and finally went out completely last night. This is a high-traffic pedestrian crossing and poses a safety risk for evening commuters.</p>
+</div>
+</div>
+</section>
+<!-- Evidence / Attachments -->
+<section class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-outline-variant/10 shadow-sm">
+<h2 class="text-xl font-bold mb-6 text-on-surface">Visual Evidence</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="group relative aspect-square rounded-lg overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Dark urban street corner at night with one extinguished streetlight among glowing city lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeBknBGZTNYnSgJJ8RO093szp2wUG5PLxT6IHSdoapJQt-WqUyq7Y-K2Ns8ByAeH0TucWhAGtSYFW6dm9mriTW3Q2pl9JWW-EIjMbY8opz28_VyCyYrXEvKeMZD9ZHoLyxfO-WFEquWrjTsE4XXiBUk5BNK7oZ6vQYVescQ6eKkh-XCwaoVDsf-Lp6VkTkvaeJJDGi-UZs_qjBjKLSqTDH85ifPLIbmxT-fvZUkElYkPuLW4DgOXuY0qchpvpr0OvhKkQhNT_DN4Zb"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white">zoom_in</span>
+</div>
+</div>
+<div class="group relative aspect-square rounded-lg overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Close up of a municipal streetlight pole with visible identification number decal in daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCFrCt3XPbAWeZigifioVq5Eci3q9A1fL1DOvLQiZ4tgYpiohNR_BUGJ6VhWcxNeB8eWbPMiwddseQmdhVr99lGRDmmfQYjleefIpae-h_kYpb9oBcs9tu2uv3k-PcfHtD1ClxxesuQApKOJYxZQLBaTdj29fzqwyyDQF37nyO9HxA5YfpF4z6pjwP8KtjkfvoO-20az3RZj2nnJ7Qab3GGLJD5IAHEl9ciBZRn6e_rHNm7lohGUH8IX3m6UAhUsfUqeSxk-DZPB4c"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white">zoom_in</span>
+</div>
+</div>
+<div class="bg-surface-container-low flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-outline-variant/30">
+<span class="material-symbols-outlined text-slate-400 mb-2">add_a_photo</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-slate-500">Add More</span>
+</div>
+</div>
+</section>
+<!-- Feedback Section (Visible for Resolved) -->
+<section class="bg-primary-container p-8 rounded-xl text-on-primary-container shadow-lg">
+<h2 class="text-xl font-bold mb-2">Your Feedback Matters</h2>
+<p class="text-blue-100 mb-6 text-sm">This complaint was marked as resolved on Oct 26. How was your experience with the resolution process?</p>
+<div class="flex gap-2 mb-6">
+<span class="material-symbols-outlined text-3xl cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-3xl cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-3xl cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-3xl cursor-pointer" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-3xl cursor-pointer">star</span>
+</div>
+<div class="space-y-4">
+<textarea class="w-full bg-white/10 border-0 rounded-lg placeholder:text-blue-200 text-white focus:ring-2 focus:ring-white/50" placeholder="Tell us more about the service..." rows="3"></textarea>
+<button class="w-full bg-white text-primary font-bold py-3 rounded-lg hover:bg-blue-50 transition-colors">Submit Feedback</button>
+</div>
+</section>
+</div>
+<!-- Right Column: Timeline & Log -->
+<div class="lg:col-span-5 space-y-6">
+<!-- Status Timeline -->
+<section class="bg-surface-container-low p-8 rounded-xl ring-1 ring-outline-variant/10">
+<h2 class="text-xl font-bold mb-8 text-on-surface">Resolution Timeline</h2>
+<div class="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-blue-600 before:via-blue-400 before:to-slate-300">
+<!-- Milestone: Resolved -->
+<div class="relative flex items-center justify-between gap-6 group">
+<div class="flex items-center gap-6">
+<div class="relative z-10 w-10 h-10 flex items-center justify-center bg-tertiary-container rounded-full ring-4 ring-white">
+<span class="material-symbols-outlined text-white text-sm">check</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Complaint Resolved</h3>
+<p class="text-xs text-on-surface-variant">Technician replaced LED fixture at 02:44 PM</p>
+</div>
+</div>
+<span class="text-[10px] font-bold text-slate-400 whitespace-nowrap">OCT 26, 3:00 PM</span>
+</div>
+<!-- Milestone: In Progress -->
+<div class="relative flex items-center justify-between gap-6 group">
+<div class="flex items-center gap-6">
+<div class="relative z-10 w-10 h-10 flex items-center justify-center bg-primary rounded-full ring-4 ring-white">
+<span class="material-symbols-outlined text-white text-sm">engineering</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Work Order Issued</h3>
+<p class="text-xs text-on-surface-variant">Assigned to Department of Public Works</p>
+</div>
+</div>
+<span class="text-[10px] font-bold text-slate-400 whitespace-nowrap">OCT 25, 8:12 AM</span>
+</div>
+<!-- Milestone: Acknowledged -->
+<div class="relative flex items-center justify-between gap-6 group">
+<div class="flex items-center gap-6">
+<div class="relative z-10 w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full ring-4 ring-white">
+<span class="material-symbols-outlined text-blue-700 text-sm">visibility</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Under Review</h3>
+<p class="text-xs text-on-surface-variant">Validated by Smart City Command Center</p>
+</div>
+</div>
+<span class="text-[10px] font-bold text-slate-400 whitespace-nowrap">OCT 24, 11:30 AM</span>
+</div>
+<!-- Milestone: Created -->
+<div class="relative flex items-center justify-between gap-6 group">
+<div class="flex items-center gap-6">
+<div class="relative z-10 w-10 h-10 flex items-center justify-center bg-slate-200 rounded-full ring-4 ring-white">
+<span class="material-symbols-outlined text-slate-600 text-sm">add_task</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Case Created</h3>
+<p class="text-xs text-on-surface-variant">Initial report filed via mobile app</p>
+</div>
+</div>
+<span class="text-[10px] font-bold text-slate-400 whitespace-nowrap">OCT 24, 9:45 AM</span>
+</div>
+</div>
+</section>
+<!-- Activity Log -->
+<section class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-outline-variant/10 shadow-sm">
+<h2 class="text-lg font-bold mb-6 text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400">history</span>
+                    Activity Log
+                </h2>
+<div class="space-y-4">
+<div class="flex gap-4 p-3 rounded-lg bg-surface-container-low/50">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-600">JS</div>
+<div class="flex-1">
+<p class="text-xs font-semibold text-on-surface">John Smith (Admin)</p>
+<p class="text-xs text-on-surface-variant">Added internal note: "Fixture model identified as S2-X10. Parts available in truck."</p>
+<p class="text-[10px] text-slate-400 mt-1">2 days ago</p>
+</div>
+</div>
+<div class="flex gap-4 p-3 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-xs font-bold text-blue-700">SYS</div>
+<div class="flex-1">
+<p class="text-xs font-semibold text-on-surface">System</p>
+<p class="text-xs text-on-surface-variant">Automated status update: Priority set to High due to traffic density.</p>
+<p class="text-[10px] text-slate-400 mt-1">2 days ago</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar from JSON -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-6 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1 hover:text-blue-600 dark:hover:text-blue-300 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100/50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl px-4 py-1 hover:text-blue-600 dark:hover:text-blue-300 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">assignment_late</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">My Complaints</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1 hover:text-blue-600 dark:hover:text-blue-300 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">Alerts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1 hover:text-blue-600 dark:hover:text-blue-300 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[11px] font-medium uppercase tracking-widest Inter mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

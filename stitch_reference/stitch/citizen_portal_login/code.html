@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Civic Clarity | Secure Access</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d8e2ff",
+                    "secondary-fixed": "#d8e2ff",
+                    "surface-container-highest": "#e1e3e4",
+                    "error-container": "#ffdad6",
+                    "surface": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#adc7ff",
+                    "on-surface-variant": "#414754",
+                    "inverse-on-surface": "#f0f1f2",
+                    "tertiary-container": "#008939",
+                    "on-tertiary-fixed": "#002108",
+                    "on-tertiary-container": "#ffffff",
+                    "on-background": "#191c1d",
+                    "primary-container": "#1a73e8",
+                    "secondary-fixed-dim": "#afc7fb",
+                    "inverse-primary": "#adc7ff",
+                    "tertiary": "#006d2c",
+                    "on-surface": "#191c1d",
+                    "outline-variant": "#c1c6d6",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d9dadb",
+                    "outline": "#727785",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "secondary": "#475e8c",
+                    "surface-container-low": "#f3f4f5",
+                    "secondary-container": "#b2c9fe",
+                    "surface-bright": "#f8f9fa",
+                    "surface-container": "#edeeef",
+                    "on-primary-fixed": "#001a41",
+                    "surface-container-high": "#e7e8e9",
+                    "inverse-surface": "#2e3132",
+                    "primary": "#005bbf",
+                    "on-secondary-container": "#3d5481",
+                    "on-secondary-fixed-variant": "#2e4673",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e1e3e4",
+                    "on-secondary-fixed": "#001a41",
+                    "tertiary-fixed-dim": "#6ddd81",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f8f9fa",
+                    "on-tertiary-fixed-variant": "#005320",
+                    "surface-tint": "#005bc0",
+                    "on-primary-fixed-variant": "#004493",
+                    "on-primary-container": "#ffffff",
+                    "tertiary-fixed": "#89fa9b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow {
+            shadow: 0px 8px 24px rgba(25, 28, 29, 0.06);
+        }
+        .glass-panel {
+            background: rgba(248, 249, 250, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen overflow-x-hidden">
+<!-- TopAppBar Fragment (Simplified for Auth Flow) -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-8 h-20 bg-transparent">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="account_balance">account_balance</span>
+<span class="text-2xl font-bold tracking-tighter text-blue-700">Civic Clarity</span>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors">Help Center</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full text-sm font-bold tracking-tight shadow-lg hover:bg-blue-700 transition-all active:scale-95">
+                Report an Issue
+            </button>
+</div>
+</header>
+<main class="relative min-h-screen flex items-center justify-center lg:justify-start px-6 lg:px-24">
+<!-- Background Image with Overlay -->
+<div class="fixed inset-0 z-0">
+<img alt="Modern sustainable city skyline" class="w-full h-full object-cover" data-alt="Stunning panoramic view of a modern clean city skyline with glass skyscrapers and green urban parks at bright midday light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrGD81tzolycKOZjnrb_L-s7k0-jJmL6I53dOGLx-zWJLnXQtgMfuRQ5229Zkuo7Y8a3mSZPSvxaebFCVF3EiwFcT4cy4Ng5PLFVAeBJHTRx6BWOp5IUJq_UjJQORBxV1NTreUuNydlJpsU0W6HX11GTFhL8Sofp8PINdjy8oqqVaUygGTxF-Bpu7VMAoBgT93JzTBDMXd3O9r-rSLxqo00P7z1RxjCBt9j597Vxvnp-8IMOMw1vWNCXM4qIPIqhmzgHEoHJN8niLt"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+</div>
+<!-- Auth Canvas -->
+<div class="relative z-10 w-full max-w-lg">
+<div class="mb-10">
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-fixed-variant text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">
+                    Official Portal
+                </span>
+<h1 class="text-5xl lg:text-6xl font-extrabold tracking-tighter text-on-surface mb-4 leading-none">
+                    Welcome to your <br/><span class="text-primary">Digital City.</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-md font-medium leading-relaxed">
+                    Access city services, track complaints, and participate in civic decisions through your secure unified portal.
+                </p>
+</div>
+<!-- Login Card -->
+<div class="bg-surface-container-lowest p-8 lg:p-10 rounded-xl shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-outline-variant/10">
+<!-- Toggle Tab Asymmetry -->
+<div class="flex items-center gap-1 p-1 bg-surface-container-low rounded-lg mb-8">
+<button class="flex-1 py-3 px-4 rounded-md text-sm font-bold bg-surface-container-lowest text-primary shadow-sm">
+                        Citizen Login
+                    </button>
+<button class="flex-1 py-3 px-4 rounded-md text-sm font-bold text-on-surface-variant hover:bg-surface-container-high transition-colors">
+                        Admin Login
+                    </button>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="mail">mail</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all rounded-t-lg outline-none text-on-surface font-medium" placeholder="name@domain.gov" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Secure Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="lock">lock</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all rounded-t-lg outline-none text-on-surface font-medium" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="flex items-center justify-between py-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Remember me</span>
+</label>
+<a class="text-sm font-bold text-primary hover:underline underline-offset-4" href="#">Forgot Password?</a>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary rounded-lg font-extrabold text-lg tracking-tight hover:shadow-xl hover:shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2" type="submit">
+                        Sign In
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<div class="mt-10 pt-8 border-t border-outline-variant/20">
+<div class="flex flex-col gap-4">
+<p class="text-sm text-center text-on-surface-variant font-medium">New to Civic Clarity?</p>
+<button class="w-full py-3 border border-outline-variant rounded-lg font-bold text-on-surface hover:bg-surface-container-low transition-colors">
+                            Create Citizen Account
+                        </button>
+</div>
+</div>
+</div>
+<!-- Pre-login Actions / Bento Hint -->
+<div class="mt-8 grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-lowest/60 backdrop-blur-md rounded-lg flex items-center gap-3 border border-white/20">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="emergency">emergency</span>
+</div>
+<div>
+<p class="text-[10px] font-black uppercase tracking-wider text-tertiary">Quick Action</p>
+<p class="text-xs font-bold text-on-surface">Report Emergency</p>
+</div>
+</div>
+<div class="p-4 bg-surface-container-lowest/60 backdrop-blur-md rounded-lg flex items-center gap-3 border border-white/20">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="map">map</span>
+</div>
+<div>
+<p class="text-[10px] font-black uppercase tracking-wider text-secondary">Public Data</p>
+<p class="text-xs font-bold text-on-surface">View City Map</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Identity -->
+<footer class="fixed bottom-0 left-0 w-full px-8 py-6 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/60 z-10">
+<div class="flex gap-6 mb-4 md:mb-0">
+<span>© 2024 Civic Clarity Authority</span>
+<span>Accessibility</span>
+<span>Terms of Service</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>All Systems Operational</span>
+</div>
+</footer>
+</body></html>
